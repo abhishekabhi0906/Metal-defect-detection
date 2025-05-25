@@ -1,44 +1,37 @@
-A deep learning project that classifies surface-level metal defects using image processing and Convolutional Neural Networks (CNN). The model is trained on labeled defect images and is capable of identifying six different types of surface anomalies found in industrial steel components.
+This project uses Convolutional Neural Networks (CNNs) to automatically detect and classify surface-level defects in metal components from image data. The goal is to streamline quality control in industrial manufacturing by replacing manual inspection with an intelligent deep learning model.
 
-Project Description
-This project aims to automate the detection of metal surface defects by training a supervised image classification model. The model learns from a dataset containing images of six defect categories—Crazing, Inclusion, Patches, Pitted Surface, Rolled-in Scale, and Scratches—and predicts the defect present in new image inputs with high accuracy. The model was built using CNN layers for feature extraction and trained using the Keras framework.
+Project Overview
+This project involves training a supervised deep learning model using Keras to detect six types of surface defects on steel: crazing, inclusion, patches, pitted surface, rolled-in scale, and scratches. The model was trained on labeled images and achieved high classification accuracy, allowing for real-time defect prediction on new input images.
 
-Tech Stack
+Key Features:
+Preprocessing of image data (resizing, normalization, label encoding)
+CNN architecture with Conv2D, MaxPooling, Dropout, and Dense layers
+High accuracy (~98%) on validation dataset
+Real-time inference using custom input image
+Scalability for deployment in quality control systems
+
+Model Architecture :
+Input Layer: 200x200x3 RGB images
+Multiple Conv2D + ReLU layers
+MaxPooling layers for dimensionality reduction
+Dropout for regularization
+Fully connected Dense layers with softmax output
+
+Dataset:
+6 defect categories from NEU Metal Surface Defects Dataset
+Images split into training and validation sets
+Preprocessed using Keras’ ImageDataGenerator
+
+Tech Stack :
 Python
-
-Keras / TensorFlow
-
+Keras & TensorFlow
 NumPy, Pandas
-
-OpenCV
-
-Matplotlib / Seaborn
-
+Matplotlib & Seaborn
+OpenCV (for preprocessing)
 Jupyter Notebook
 
-📁 Dataset
-Source: NEU Surface Defect Database
-
-Categories: 6 metal defect classes
-
-Format: Images (.jpg / .png)
-
-Preprocessing: Resized to 200x200, rescaled, and labeled using one-hot encoding.
-
-🧠 Model Architecture
-Convolutional layers (Conv2D + ReLU)
-
-MaxPooling layers
-
-Dropout layers (to avoid overfitting)
-
-Dense layers with softmax activation
-
-Categorical crossentropy loss and Adam optimizer
-
-📈 Results
+Results :
+Confusion matrix and classification report available in notebook
 Validation Accuracy: ~98%
-
 Model successfully detects and classifies defects on unseen image inputs.
-
 Real-time prediction on new images implemented via a simple inference script.
