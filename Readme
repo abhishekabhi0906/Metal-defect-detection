@@ -1,1 +1,44 @@
-hh
+A deep learning project that classifies surface-level metal defects using image processing and Convolutional Neural Networks (CNN). The model is trained on labeled defect images and is capable of identifying six different types of surface anomalies found in industrial steel components.
+
+Project Description
+This project aims to automate the detection of metal surface defects by training a supervised image classification model. The model learns from a dataset containing images of six defect categories—Crazing, Inclusion, Patches, Pitted Surface, Rolled-in Scale, and Scratches—and predicts the defect present in new image inputs with high accuracy. The model was built using CNN layers for feature extraction and trained using the Keras framework.
+
+Tech Stack
+Python
+
+Keras / TensorFlow
+
+NumPy, Pandas
+
+OpenCV
+
+Matplotlib / Seaborn
+
+Jupyter Notebook
+
+📁 Dataset
+Source: NEU Surface Defect Database
+
+Categories: 6 metal defect classes
+
+Format: Images (.jpg / .png)
+
+Preprocessing: Resized to 200x200, rescaled, and labeled using one-hot encoding.
+
+🧠 Model Architecture
+Convolutional layers (Conv2D + ReLU)
+
+MaxPooling layers
+
+Dropout layers (to avoid overfitting)
+
+Dense layers with softmax activation
+
+Categorical crossentropy loss and Adam optimizer
+
+📈 Results
+Validation Accuracy: ~98%
+
+Model successfully detects and classifies defects on unseen image inputs.
+
+Real-time prediction on new images implemented via a simple inference script.
